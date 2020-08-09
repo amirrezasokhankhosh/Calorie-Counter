@@ -1,0 +1,9 @@
+{% extends "calorie_counter_app/base.html" %}
+{% block content %}
+    <p>Add a new food:</p>
+    <form action="{% url 'calorie_counter_app:new_food' %}" method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name="submit">add food</button>
+    </form>
+{% endblock content %}

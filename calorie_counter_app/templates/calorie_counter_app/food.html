@@ -25,4 +25,7 @@
             Saturated Fat : {{saturated_fat}}
         </li>
     </ul>
+    <p>
+        <a href="{% url 'calorie_counter_app:edit_food' food.id %}">edit food</a>
+    </p>
 {% endblock content %}

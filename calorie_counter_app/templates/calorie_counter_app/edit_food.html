@@ -1,0 +1,10 @@
+{% extends "calorie_counter_app/base.html" %}
+{% block content %}
+    <p><a href="{% url 'calorie_counter_app:food' food.id %}">{{ food }}</a></p>
+    <p>Edit food:</p>
+    <form action="{% url 'calorie_counter_app:edit_food' food.id %}" method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name="submit">save changes</button>
+    </form>
+{% endblock content %}

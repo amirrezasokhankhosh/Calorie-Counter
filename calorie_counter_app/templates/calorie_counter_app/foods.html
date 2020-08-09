@@ -10,5 +10,6 @@
             <li>No foods have been added yet.</li>
         {% endfor %}
     </ul>
+    <a href="{% url 'calorie_counter_app:new_food' %}">Add a new food:</a>
     <h3>Calories : {{calories}}</h3>
 {% endblock content %}
