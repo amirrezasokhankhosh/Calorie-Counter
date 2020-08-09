@@ -1,0 +1,28 @@
+{% extends 'calorie_counter_app/base.html' %}
+{% block content %}
+
+    <p>Food : {{ food }}</p>
+    <ul>
+        <li>
+            Calories : {{calories}}
+        </li>
+        <li>
+            Carbohydrates : {{carbohydrates}}
+        </li>
+        <li>
+            Cholestrol : {{cholestrol}}
+        </li>
+        <li>
+            Fat : {{fat}}
+        </li>
+        <li>
+            Fiber : {{fiber}}
+        </li>
+        <li>
+            Protein : {{protein}}
+        </li>
+        <li>
+            Saturated Fat : {{saturated_fat}}
+        </li>
+    </ul>
+{% endblock content %}
