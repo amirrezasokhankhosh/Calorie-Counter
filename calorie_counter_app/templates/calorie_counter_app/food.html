@@ -28,4 +28,7 @@
     <p>
         <a href="{% url 'calorie_counter_app:edit_food' food.id %}">edit food</a>
     </p>
+    <p>
+        <a href="{% url 'calorie_counter_app:delete_food' food.id %}">delete food</a>
+    </p>
 {% endblock content %}

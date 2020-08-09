@@ -20,4 +20,5 @@ from django.conf.urls import include, url
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'', include(('calorie_counter_app.urls' , 'calorie_counter_app'), namespace='calorie_counter_app')),
+    url(r'users/', include(('users.urls' , 'users'), namespace='users')),
 ]

@@ -38,8 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Third party apps
+    'bootstrap3',
+
     #MY APPS
-    'calorie_counter_app'
+    'calorie_counter_app',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +125,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# My settings
+LOGIN_URL = '/users/login/'
