@@ -1,9 +1,15 @@
 {% extends "calorie_counter_app/base.html" %}
+{% load bootstrap3 %}
+{% block header %}
+    <h2>Add a new food:</h2>
+{% endblock header %}
 {% block content %}
-    <p>Add a new workout:</p>
-    <form action="{% url 'calorie_counter_app:new_workout' %}" method='post'>
+    <form action="{% url 'calorie_counter_app:new_workout' %}" method='post'
+    class='form'>
         {% csrf_token %}
-        {{ form.as_p }}
-        <button name="submit">add workout</button>
+        {% bootstrap_form form %}
+        {% buttons %}
+            <button name="submit" class="btn btn-primary">add workout</button>
+        {% endbuttons %}
     </form>
 {% endblock content %}

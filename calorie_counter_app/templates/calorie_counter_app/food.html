@@ -1,34 +1,36 @@
 {% extends 'calorie_counter_app/base.html' %}
+{% block header %}
+    <h1>Food : {{ food }}</h1>
+{% endblock header %}
 {% block content %}
 
-    <p>Food : {{ food }}</p>
     <ul>
         <li>
-            Calories : {{calories}}
+            <h3>Calories : {{calories}}</h3>
         </li>
         <li>
-            Carbohydrates : {{carbohydrates}}
+            <h3>Carbohydrates : {{carbohydrates}}</h3>
         </li>
         <li>
-            Cholestrol : {{cholestrol}}
+            <h3>Cholestrol : {{cholestrol}}</h3>
         </li>
         <li>
-            Fat : {{fat}}
+            <h3>Fat : {{fat}}</h3>
         </li>
         <li>
-            Fiber : {{fiber}}
+            <h3>Fiber : {{fiber}}</h3>
         </li>
         <li>
-            Protein : {{protein}}
+            <h3>Protein : {{protein}}</h3>
         </li>
         <li>
-            Saturated Fat : {{saturated_fat}}
+            <h3>Saturated Fat : {{saturated_fat}}</h3>
         </li>
     </ul>
     <p>
-        <a href="{% url 'calorie_counter_app:edit_food' food.id %}">edit food</a>
+        <h3><a href="{% url 'calorie_counter_app:edit_food' food.id %}">edit food</a></h3>
     </p>
     <p>
-        <a href="{% url 'calorie_counter_app:delete_food' food.id %}">delete food</a>
+        <h3><a href="{% url 'calorie_counter_app:delete_food' food.id %}">delete food</a></h3>
     </p>
 {% endblock content %}

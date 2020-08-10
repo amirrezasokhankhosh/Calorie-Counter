@@ -1,7 +1,18 @@
-{% extends 'calorie_counter_app/base.html' %}
+{% extends "calorie_counter_app/base.html" %}
+{% block header %}
+    <div class='jumbotron'>
+        <h1>Track your Activity.</h1>
+    </div>
+{% endblock header %}
+
 {% block content %}
-    <p>The calorie counter app is a great way to keep track of all
-    the calories you are burning every day. 
-    The user can add all the food they are eating and the app will 
-    count the calories.</p>
+    <h2>
+        <a href="{% url 'users:register' %}">Register an account</a> to add 
+            foods and workouts you do during the day and find out what you are
+            doing with the calories you earn or burn.
+    </h2>
+    <h2>
+        The calorie counter app is a great way to keep track of all
+        the calories you are burning every day.
+    </h2>
 {% endblock content %}
