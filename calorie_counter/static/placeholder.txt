@@ -1,0 +1,2 @@
+This file ensures that calorie_counter/static/ will be added to the project.
+Django will collect static files and place them in calorie_counter/static/.
