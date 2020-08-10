@@ -1,0 +1,21 @@
+{% extends 'calorie_counter_app/base.html' %}
+{% block content %}
+    <p>Workout : {{workout}}</p>
+    <ul>
+        <li>
+            Name : {{name}}
+        </li>
+        <li>
+            Time : {{time}}
+        </li>
+        <li>
+            Calories burned by this workout : {{calories_burned}}
+        </li>
+    </ul>
+    <p>
+        <a href="{% url 'calorie_counter_app:edit_workout' workout.id %}">edit workout</a>
+    </p>
+    <p>
+        <a href="{% url 'calorie_counter_app:delete_workout' workout.id %}">delete workout</a>
+    </p>
+{% endblock content %}

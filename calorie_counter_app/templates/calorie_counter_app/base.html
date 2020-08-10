@@ -1,6 +1,6 @@
 <p>
     <a href="{% url 'calorie_counter_app:index' %}">Calorie Counter</a>
-    <a href="{% url 'calorie_counter_app:foods' %}">Foods</a>
+    <a href="{% url 'calorie_counter_app:myInfo' %}">My Informations</a>
     {% if user.is_authenticated %}
         Hello, {{ user.username }}.
         <a href="{% url 'users:logout' %}">log out</a>
